@@ -1,3 +1,40 @@
 body{
+    background-color: grey;
+}
+
+#base{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+
+    max-height: 100vh;
+    height: 100vh;
+}
+
+#menu{
     background-color: blue;
+
+    grid-row: 1 /span 2;
+
+    width: 100px;
+}
+
+#title{
+    background-color: purple;
+    
+    height: 0.5rc;
+}
+
+#content{
+    background-color: red;
+
+    grid-column: 2;
+}
+
+#images{
+    background-color: green;
+
+    grid-column: 3;
+
+    grid-row: 1 /span 2;    
 }

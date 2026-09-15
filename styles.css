@@ -59,10 +59,16 @@ body{
 
 #right_container{
     /* !Zrobić Masonry Layout! Problem z gridem i column-count */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* Do sprawdzenia inline block, -webkit */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* display:-webkit-inline-box;
+    -moz-column-count: 2;
+    -webkit-column-count: 2; */
+    /* display: inline;
+    column-count: 2;
     column-gap: 1rem;
-    padding: 1rem;
+    padding: 1rem; */
     overflow: hidden;
 
     background-color: green;
@@ -72,8 +78,17 @@ body{
     grid-row: 1 /span 2;    
 }
 
+#gallery{
+    /* Jakimś cudem to działa. Nie rozumiem. I nie działa overflow hidden ale w right container już tak. Nie rozumiem */
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
 .images{
-    display:block;
+    /* grid-row: span 2; */
+    display: inline-block;
 
     max-width: 100%;
     max-height: 100%;

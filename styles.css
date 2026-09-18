@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: grey;
 }
@@ -70,11 +74,11 @@ body{
     grid-row: 1 /span 2;    
 }
 
-#gallery{
+.gallery{
     display: inline-block;
     column-count: 2;
     column-gap: 1rem;
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
 
     animation: test;
     animation-iteration-count: infinite;

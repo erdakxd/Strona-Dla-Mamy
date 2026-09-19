@@ -70,6 +70,8 @@ body{
     background-color: purple;
     justify-content: center;
     align-items: center;
+    
+    grid-column: 2;
 }
 
 .home_title{
@@ -188,6 +190,19 @@ body{
 
 #content_gallery{
     display: none;
+}
+
+.gallery_items{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.gallery_items > img{
+    max-height: 10rem;
+    align-self: center;
+    justify-self: center;
 }
 
 /* Contact */

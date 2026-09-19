@@ -20,10 +20,19 @@ let contentItems = [contentMainPage,
     contentGallery, 
     contentContact];
 
+// 
+let rightContainer = document.getElementById("right_container");
+let tittle = document.getElementById("title");
+let content = document.getElementById("content");
+
 // Functions
 function switchContent(event){
+    //Default
     for (let i = 0; i < contentItems.length; i++){ 
         contentItems[i].style.display = "none";
+        rightContainer.style.display = "block";
+        tittle.style.gridColumn = "2";
+        content.style.gridColumn = "2";
     }
 
     if (event.srcElement === menuItems[0]){
@@ -37,6 +46,9 @@ function switchContent(event){
     }
     else if (event.srcElement === menuItems[3]){
         contentItems[3].style.display = "flex";
+        rightContainer.style.display = "none";
+        tittle.style.gridColumn = "2 / span 3";
+        content.style.gridColumn = "2 / span3";
     }
     else if (event.srcElement === menuItems[4]){
         contentItems[4].style.display = "flex";

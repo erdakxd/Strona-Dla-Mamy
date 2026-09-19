@@ -24,6 +24,7 @@ let contentItems = [contentMainPage,
 let rightContainer = document.getElementById("right_container");
 let tittle = document.getElementById("title");
 let content = document.getElementById("content");
+let hTitle = document.getElementById("main_title");
 
 // Functions
 function switchContent(event){
@@ -37,21 +38,26 @@ function switchContent(event){
 
     if (event.srcElement === menuItems[0]){
         contentItems[0].style.display = "flex";
+        hTitle.innerHTML = "Strona Główna";
     }
     else if (event.srcElement === menuItems[1]){
         contentItems[1].style.display = "flex";
+        hTitle.innerHTML = "Aktualności";
     }
     else if (event.srcElement === menuItems[2]){
         contentItems[2].style.display = "flex";
+        hTitle.innerHTML = "Repertuar";
     }
     else if (event.srcElement === menuItems[3]){
         contentItems[3].style.display = "flex";
         rightContainer.style.display = "none";
         tittle.style.gridColumn = "2 / span 3";
         content.style.gridColumn = "2 / span3";
+        hTitle.innerHTML = "Galeria";
     }
     else if (event.srcElement === menuItems[4]){
         contentItems[4].style.display = "flex";
+        hTitle.innerHTML = "Kontakt";
     }
 }
 

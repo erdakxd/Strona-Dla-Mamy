@@ -18,6 +18,19 @@ body{
     max-height: 100vh;
     height: 100vh;
 }
+/* ########################### */
+/* Logo */
+/* ########################### */
+
+#logo{
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ########################### */
 /* Menu list */
@@ -26,7 +39,7 @@ body{
 #menu{
     background-color: blue;
 
-    grid-row: 1 /span 2;
+    grid-row: 2;
 }
 
 #list_menu{
@@ -74,7 +87,7 @@ body{
     grid-column: 2;
 }
 
-.home_title{
+#home_title{
     font-size: 4em
 }
 
@@ -93,6 +106,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 1rem;
 }
 
 /* Main Page */

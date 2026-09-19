@@ -33,7 +33,7 @@ function switchContent(event){
         contentItems[1].style.display = "flex";
     }
     else if (event.srcElement === menuItems[2]){
-        contentItems[2].style.display = "grid";
+        contentItems[2].style.display = "flex";
     }
     else if (event.srcElement === menuItems[3]){
         contentItems[3].style.display = "flex";

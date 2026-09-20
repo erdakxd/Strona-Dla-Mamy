@@ -1,9 +1,13 @@
-const gridContainer = document.querySelector('.grid');
+const gridContainer = document.getElementById('base');
 const animateOptions = {
     duration: 1000,
-    easing: 'linear',
+    easing: 'easeIn',
     onStart: (animatingElementList)=> {
-        console.log("NIGGGERRER!!");
+        console.log(1);
+    },
+    onEnd: (animatingElementList)=> {
+        tittle.style.display = "none";
+        content.style.display = "none";
     }
 }
 

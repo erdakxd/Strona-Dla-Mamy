@@ -22,7 +22,7 @@ const contentItems = [contentMainPage,
 
 // 
 const rightContainer = document.getElementById("right_container");
-const tittle = document.getElementById("title");
+const title = document.getElementById("title");
 const content = document.getElementById("content");
 const hTitle = document.getElementById("main_title");
 
@@ -32,7 +32,7 @@ function switchContent(event){
     for (let i = 0; i < contentItems.length; i++){ 
         contentItems[i].style.display = "none";
         rightContainer.style.display = "block";
-        tittle.style.gridColumn = "2";
+        title.style.gridColumn = "2";
         content.style.gridColumn = "2";
     }
 
@@ -51,7 +51,7 @@ function switchContent(event){
     else if (event.srcElement === menuItems[3]){
         contentItems[3].style.display = "flex";
         rightContainer.style.display = "none";
-        tittle.style.gridColumn = "2 / span 3";
+        title.style.gridColumn = "2 / span 3";
         content.style.gridColumn = "2 / span3";
         hTitle.innerHTML = "Galeria";
     }

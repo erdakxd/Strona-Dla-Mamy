@@ -1,30 +1,30 @@
 // Menu Buttons
-let menuMainPage = document.getElementById("menu_main_page");
-let menuNews = document.getElementById("menu_news");
-let menuRepertoire = document.getElementById("menu_repertoire");
-let menuGallery = document.getElementById("menu_gallery");
-let menuContact = document.getElementById("menu_contact");
+const menuMainPage = document.getElementById("menu_main_page");
+const menuNews = document.getElementById("menu_news");
+const menuRepertoire = document.getElementById("menu_repertoire");
+const menuGallery = document.getElementById("menu_gallery");
+const menuContact = document.getElementById("menu_contact");
 
-let menuItems = [menuMainPage, menuNews, menuRepertoire, menuGallery, menuContact];
+const menuItems = [menuMainPage, menuNews, menuRepertoire, menuGallery, menuContact];
 
 // Content Items
-let contentMainPage = document.getElementById("content_main_page");
-let contentNews = document.getElementById("content_news");
-let contentRepertoire = document.getElementById("content_repertoire");
-let contentGallery = document.getElementById("content_gallery");
-let contentContact = document.getElementById("content_contact");
+const contentMainPage = document.getElementById("content_main_page");
+const contentNews = document.getElementById("content_news");
+const contentRepertoire = document.getElementById("content_repertoire");
+const contentGallery = document.getElementById("content_gallery");
+const contentContact = document.getElementById("content_contact");
 
-let contentItems = [contentMainPage, 
+const contentItems = [contentMainPage, 
     contentNews, 
     contentRepertoire, 
     contentGallery, 
     contentContact];
 
 // 
-let rightContainer = document.getElementById("right_container");
-let tittle = document.getElementById("title");
-let content = document.getElementById("content");
-let hTitle = document.getElementById("main_title");
+const rightContainer = document.getElementById("right_container");
+const tittle = document.getElementById("title");
+const content = document.getElementById("content");
+const hTitle = document.getElementById("main_title");
 
 // Functions
 function switchContent(event){

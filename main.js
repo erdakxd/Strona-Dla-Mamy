@@ -38,7 +38,7 @@ function switchContent(event){
 
     if (event.srcElement === menuItems[0]){
         contentItems[0].style.display = "flex";
-        hTitle.innerHTML = "Strona Główna";
+        hTitle.innerHTML = "Lalkowa Scena dla Dzieci";
     }
     else if (event.srcElement === menuItems[1]){
         contentItems[1].style.display = "flex";

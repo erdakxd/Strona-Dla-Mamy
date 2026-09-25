@@ -52,7 +52,7 @@ function switchContent(event){
         contentItems[3].style.display = "flex";
         rightContainer.style.display = "none";
         title.style.gridColumn = "2 / span 3";
-        content.style.gridColumn = "2 / span3";
+        content.style.gridColumn = "2 / span 3";
         hTitle.innerHTML = "Galeria";
     }
     else if (event.srcElement === menuItems[4]){

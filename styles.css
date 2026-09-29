@@ -10,8 +10,6 @@ body{
     background-color: rgb(195, 126, 0);
 
     border-radius: 4rem;
-
-    padding: 3rem;
     box-shadow: 0px 0px 2rem black inset;
 }
 
@@ -113,6 +111,7 @@ body{
     user-select: none;
 
     transition: box-shadow 0.4s ease-out;
+    cursor: pointer;
 
 }
 
@@ -232,6 +231,7 @@ body{
     flex-direction: column;
     border-radius: 1rem;
     box-shadow: 5px 5px 15px rgb(140, 9, 35);
+    position: relative;
     
     text-align: center;
 
@@ -240,10 +240,27 @@ body{
     background-color: blueviolet;
 
     transition: box-shadow 0.4s ease-out;
+    cursor: pointer;
 }
 
 .items_repertoire:hover{
     box-shadow: -3px -3px 1rem black;
+}
+
+.items_repertoire::after{
+    content: "";
+    position: absolute;
+    background: rgb(188, 188, 188);
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.items_repertoire:active:after{
+    opacity: 0.8;
+    transition: 10ms;
 }
 
 .items_repertoire > h3{

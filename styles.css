@@ -124,7 +124,10 @@ body{
 /* ########################### */
 
 .cGrid-title{
-    display: flex;
+    /* For now without Title. Reason: More space for content
+
+    /* display: flex; */
+    display: none;
     min-width: 0;
     overflow: hidden;
 
@@ -153,6 +156,7 @@ body{
     overflow: auto;
 
     grid-column: 2;
+    grid-row: 1 / 2 span;
     min-width: 0;
     max-width: 100%;
     
@@ -250,7 +254,7 @@ body{
 .items_repertoire::after{
     content: "";
     position: absolute;
-    background: rgb(188, 188, 188);
+    background: rgb(243, 243, 243);
     opacity: 0;
     transition: opacity 0.5s;
     width: 100%;

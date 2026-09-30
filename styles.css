@@ -251,6 +251,7 @@ body{
 
     transition: box-shadow 0.4s ease-out, width 0.5s ease-out, grid-column 0.5s ease-out;
     cursor: pointer;
+    grid-column: auto / auto;
 }
 
 .items_repertoire:hover{
@@ -273,10 +274,10 @@ body{
     transition: 10ms;
 }
 
-.items_repertoire:active{
+/* .items_repertoire:active{
     position:sticky;
     grid-column: 1 / 3 span;
-}
+} */
 
 .items_repertoire > h3{
     padding: 1rem;

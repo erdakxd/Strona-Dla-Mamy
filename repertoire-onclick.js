@@ -14,8 +14,13 @@ function repertoireResize(event){
         return arrayCheckTrue.every(Boolean);
     }
 
+    StyleTarget = event.target.style;
+    // ImgTarget = event.target.className
+
     if (event.target.className === 'items_repertoire' && checkTrue(checkGridColumn()) === true){
-        event.target.style.gridColumn = "1 / 3 span"
+        StyleTarget.gridColumn = "1 / 3 span";
+        // StyleTarget.maxWidth = "50%";
+        
         console.log('works')
     }
 }

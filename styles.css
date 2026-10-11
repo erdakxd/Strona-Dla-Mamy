@@ -349,7 +349,7 @@ body{
     animation: carouser;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 20s;
+    animation-duration: 40s;
 }
 
 @keyframes carouser{

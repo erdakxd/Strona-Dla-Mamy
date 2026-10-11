@@ -14,12 +14,16 @@ function repertoireResize(event){
         return arrayCheckTrue.every(Boolean);
     }
 
-    StyleTarget = event.target.style;
-    // ImgTarget = event.target.className
+    const styleTarget = event.target.style;
+    const imgTarget = event.target.getElementsByTagName("img");
+    const headerTarget = event.target.getElementsByTagName("h3");
+    const descriptionTarget = event.target.querySelector(".box-description");
 
     if (event.target.className === 'items_repertoire' && checkTrue(checkGridColumn()) === true){
-        StyleTarget.gridColumn = "1 / 3 span";
-        // StyleTarget.maxWidth = "50%";
+        styleTarget.gridColumn = "1 / 3 span";
+        imgTarget[0].style.maxWidth = "50%";
+        headerTarget[0].style.fontSize = "2rem";
+        descriptionTarget.style.display = "flex";
         
         console.log('works')
     }

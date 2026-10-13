@@ -35,9 +35,8 @@ function switchContent(event){
         for (let i = 0; i < contentItems.length; i++){ 
             contentItems[i].style.display = "none";
             title.style.gridColumn = "2";
-            content.style.gridColumn = "2";
+            content.style.gridColumn = "1 / span 2;";
         }
-        console.log(1)
     }
 
     else{
@@ -63,11 +62,21 @@ function switchContent(event){
         hTitle.innerHTML = "Repertuar";
     }
     else if (event.srcElement === menuItems[3]){
-        contentItems[3].style.display = "flex";
-        rightContainer.style.display = "none";
-        title.style.gridColumn = "2 / span 3";
-        content.style.gridColumn = "2 / span 3";
-        hTitle.innerHTML = "Galeria";
+        if (window.matchMedia("(max-width: 720px)").matches){
+            contentItems[3].style.display = "flex";
+            rightContainer.style.display = "none";
+            title.style.gridColumn = "2 / span 3";
+            content.style.gridColumn = "1 / span 2";
+            hTitle.innerHTML = "Galeria";
+        }
+        else {
+            contentItems[3].style.display = "flex";
+            rightContainer.style.display = "none";
+            title.style.gridColumn = "2 / span 3";
+            content.style.gridColumn = "2 / span 3";
+            hTitle.innerHTML = "Galeria";
+        }
+
     }
     else if (event.srcElement === menuItems[4]){
         contentItems[4].style.display = "flex";

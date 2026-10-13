@@ -412,6 +412,18 @@ body{
         display: none
     }
 
+    #content{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    #menu {
+        grid-row: 1;
+    }
+    #list_menu{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
     
 }
 

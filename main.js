@@ -29,11 +29,23 @@ const hTitle = document.getElementById("main_title");
 // Functions
 function switchContent(event){
     //Default
-    for (let i = 0; i < contentItems.length; i++){ 
-        contentItems[i].style.display = "none";
-        rightContainer.style.display = "block";
-        title.style.gridColumn = "2";
-        content.style.gridColumn = "2";
+    if (window.matchMedia("(min-width: 1280px)").matches){
+
+        for (let i = 0; i < contentItems.length; i++){ 
+            contentItems[i].style.display = "none";
+            rightContainer.style.display = "block";
+            title.style.gridColumn = "2";
+            content.style.gridColumn = "2";
+        }
+    }
+
+    else{
+        
+        for (let i = 0; i < contentItems.length; i++){ 
+            contentItems[i].style.display = "none";
+            title.style.gridColumn = "2";
+            content.style.gridColumn = "2";
+        }
     }
 
     if (event.srcElement === menuItems[0]){

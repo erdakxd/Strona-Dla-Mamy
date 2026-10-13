@@ -25,24 +25,26 @@ const rightContainer = document.getElementById("right_container");
 const title = document.getElementById("title");
 const content = document.getElementById("content");
 const hTitle = document.getElementById("main_title");
+const mobileScreen = window.matchMedia("(max-width: 720px)");
 
 // Functions
 function switchContent(event){
     //Default
-    if (window.matchMedia("(min-width: 1280px)").matches){
+    if (window.matchMedia("(max-width: 720px)").matches){
+
+        for (let i = 0; i < contentItems.length; i++){ 
+            contentItems[i].style.display = "none";
+            title.style.gridColumn = "2";
+            content.style.gridColumn = "2";
+        }
+        console.log(1)
+    }
+
+    else{
 
         for (let i = 0; i < contentItems.length; i++){ 
             contentItems[i].style.display = "none";
             rightContainer.style.display = "block";
-            title.style.gridColumn = "2";
-            content.style.gridColumn = "2";
-        }
-    }
-
-    else{
-        
-        for (let i = 0; i < contentItems.length; i++){ 
-            contentItems[i].style.display = "none";
             title.style.gridColumn = "2";
             content.style.gridColumn = "2";
         }
@@ -73,6 +75,17 @@ function switchContent(event){
     }
 }
 
+function updateRightContainer(){
+    const galleryIsOpen = contentGallery.style.display === "flex";
+
+    if (galleryIsOpen || mobileScreen.matches) {
+        rightContainer.style.display = "none";
+    }
+    else {
+        rightContainer.style.display = "block";
+    }
+}
+
 menuItems[0].addEventListener("click", (event) =>{
     switchContent(event);
 });
@@ -88,3 +101,5 @@ menuItems[3].addEventListener("click", (event) =>{
 menuItems[4].addEventListener("click", (event) =>{
     switchContent(event);
 });
+
+mobileScreen.addEventListener("change", updateRightContainer)

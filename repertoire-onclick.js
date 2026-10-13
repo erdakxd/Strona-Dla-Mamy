@@ -45,9 +45,9 @@ function repertoireResize(event, previousTarget){
         headerTarget[0].style.fontSize = "2rem";
         descriptionTarget.style.display = "flex";
     }
-    else{
-        console.log(1)
-    }
+    // else{
+    //     console.log(1)
+    // }
 
     return event.target
 }
